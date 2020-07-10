@@ -16,11 +16,9 @@
     <img src="./assets/img/logo_pokedex.jpg" class="pokImg" alt="">
     
     <div class="container" id="contenido">
-    
-      
-        <p>Encuentra el pokemon que estás buscando</p>
+     <p>Encuentra el pokemon que estás buscando</p>
         <input type="text" placeholder="Ej:Pikachu" id="inputPokemon"> 
-     <button class="btn btn-danger"  onclick="buscador()" style="width: 4% ;height:10%"><img class="buscador" src="./assets/img/buscador.jpg" alt=""></button>
+     <button class="btn btn-danger"  onclick="buscador()" style="width: 8% ;height:10%">Buscar</button>
         <div></div>
         <div class="selectButton">
             <select id="selectPokemon" onchange="visualPokemon()">
@@ -32,15 +30,18 @@
         </div>
 
         <!--INICIO Card con pokemon por nombre-->
-        <div class="cardPokemon" id="cardShow" style="display: none;">
-            <div class="card" style="width: 30rem;">
-                <img src="" id="imgPokemon" class="card-img-top" alt="">
-                <div class="card-body" >
-                    <div id="nameDescription"></div>
-                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                </div>
-              </div>
+        <div class="cardDiseño row d-flex justify-content-center">
+            <div class="cardPokemon" id="cardShow" style="display: none;">
+                <div class="card" style="width: 27rem;">
+                    <img src="" id="imgPokemon" class="card-img-top" style="height: 170px; width: 50%; text-align: center;" alt="">
+                    <div class="card-body" >
+                        <div id="nameDescription"></div>
+                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                    </div>
+                  </div>
+            </div>
         </div>
+       
         
         <!--FIN Card con pokemon por nombre-->
     </div>
