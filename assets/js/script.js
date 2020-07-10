@@ -3,7 +3,7 @@ function buscador(){
   
 //  console.log(pokeNombre);
   $.ajax({
-    url: 'https://pokeapi.co/api/v2/pokemon/'+pokeNombre,
+    url: 'https://pokeapi.co/api/v2/pokemon/'+pokeNombre.toLowerCase(),
     contentType: "application/json",
     dataType: 'json',
     method:'GET',
