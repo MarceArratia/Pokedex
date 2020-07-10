@@ -16,7 +16,7 @@ function buscador(){
   }
 })
 }
-
+//boton select por tipo
 function selectTipo(){
   $.ajax({
     url: 'https://pokeapi.co/api/v2/type/',
@@ -84,20 +84,53 @@ function card(result){
   $('#cardShow').css('display','block');
   $('#showPokemon').css('display','none');
   //console.log(result);
-  let tipos = '<h5 class="card-text">Tipos : ';
+  let tipos='Tipos : ';
     $('#imgPokemon').attr("src",result.sprites.front_default);
    $('#nameDescription').append('<h3 class="card-title">'+result.name+'</h3>');
    result.types.forEach(element => {
     
-     tipos+= '-'+ element.type.name+' ';
+     tipos+= '<img src="./assets/img/'+ element.type.name+'.png"/>';
    });
-   tipos+= '</h5>'
+  
    $('#nameDescription').append(tipos);
-   let habilidad = '<h4>Habilidades:</h4> <p class="list-group list-group-flush">';
+   let contador = 0;
+   let habilidad = '<table class="tablePokemon table table-striped table-dark"><th colspan="2">Habilidades</th>';
+   let cantidad=result.abilities.length;
+   console.log(cantidad);
    result.abilities.forEach(element => {
-     habilidad+=' <h5 class="list-group-item">'+element.ability.name+'</h5>'
+     if(cantidad ==2){
+      if(contador == 0){
+        habilidad+='<tr><td>'+ element.ability.name + '</td>';
+      }
+      if(contador == 1){
+        habilidad+='<td>'+ element.ability.name + '</td></tr>';
+      }
+     }else if(cantidad == 3){
+      if(contador == 0){
+        habilidad+='<tr><td>'+ element.ability.name + '</td>';
+      }
+      if(contador == 1){
+        habilidad+='<td>'+ element.ability.name + '</td></tr>';
+      }if(contador == 2){
+        habilidad+='<tr><td colspan="2">'+ element.ability.name + '</td></tr>';
+      }
+     }else if (cantidad == 4){
+      if(contador == 0){
+        habilidad+='<tr><td>'+ element.ability.name + '</td>';
+      }
+      if(contador == 1){
+        habilidad+='<td>'+ element.ability.name + '</td></tr>';
+      } if(contador == 2){
+        habilidad+='<tr><td>'+ element.ability.name + '</td>';
+      }
+      if(contador == 3){
+        habilidad+='<td>'+ element.ability.name + '</td></tr>';
+      }
+     }
+     contador++;
+  
    });
-   habilidad+= '</p>';
+   habilidad+= '</table>';
    $('#nameDescription').append(habilidad);
    //Grafico
    let data= [];
@@ -129,7 +162,7 @@ function card(result){
       ]}
     },
     data: [{
-      type: "bar",
+      type: "pie",
      // toolTipContent: "<img src=\"https://canvasjs.com/wp-content/uploads/images/gallery/javascript-column-bar-charts/\"{url}\"\" style=\"width:40px; height:20px;\"> <b>{label}</b><br>Budget: ${y}bn<br>{gdp}% of GDP",
       dataPoints:data
     }]
