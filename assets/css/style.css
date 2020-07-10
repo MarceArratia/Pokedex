@@ -71,7 +71,7 @@ body{
    
   
 }
-
+   
 .card{
     border-radius: 30%;
     
@@ -81,6 +81,7 @@ body{
     border-style: inset;
     border-style: outset;
     border-radius: 5%;
+    text-align: center;
 }
 
 .cardText{

@@ -1,7 +1,8 @@
+//Guardando lo que usuario busca
 function buscador(){
   let pokeNombre = $('#inputPokemon').val();
   
-//  console.log(pokeNombre);
+//  console.log(pokeNombre); 
   $.ajax({
     url: 'https://pokeapi.co/api/v2/pokemon/'+pokeNombre.toLowerCase(),
     contentType: "application/json",
