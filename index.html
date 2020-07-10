@@ -18,6 +18,7 @@
     <div class="container" id="contenido">
      <p>Encuentra el pokemon que estás buscando</p>
         <input type="text" placeholder="Ej:Pikachu" id="inputPokemon"> 
+     <button class="btn btn-primary" onclick="buscador()"></button>
      <button class="btn btn-danger"  onclick="buscador()" style="width: 8% ;height:10%">Buscar</button>
         <div></div>
         <div class="selectButton">
@@ -35,8 +36,8 @@
                 <div class="card" style="width: 27rem;">
                     <img src="" id="imgPokemon" class="card-img-top" style="height: 170px; width: 50%; text-align: center;" alt="">
                     <div class="card-body" >
-                        <div id="nameDescription"></div>
-                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                        <div class="typesDescription" id="nameDescription"></div>
+                        <div class="grafico" id="chartContainer" style="height: 300px; width: 100%;"></div>
                     </div>
                   </div>
             </div>

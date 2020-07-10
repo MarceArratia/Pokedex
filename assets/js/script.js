@@ -63,7 +63,7 @@ function visualPokemon(){
           method:'GET', 
           success : function(result) {
             //console.log(result);
-             $('#showPokemon').append('<div class="card"><div class="card-body"><h3>'+result.name+'</h3><img src='+result.sprites.front_default+'></div></div>');
+             $('#showPokemon').append('<div class="card"><div class="card-body"><h4>'+result.name+'</h4><img src='+result.sprites.front_default+'></div></div>');
           }
           ,error : function(xhr,errmsg,err) {
             console.log(xhr.status + ": " + xhr.responseText);
@@ -84,20 +84,20 @@ function card(result){
   $('#cardShow').css('display','block');
   $('#showPokemon').css('display','none');
   //console.log(result);
-  let tipos = '<p class="card-text">types : ';
+  let tipos = '<h5 class="card-text">Tipos : ';
     $('#imgPokemon').attr("src",result.sprites.front_default);
-   $('#nameDescription').append('<h5 class="card-title">'+result.name+'</h5>');
+   $('#nameDescription').append('<h3 class="card-title">'+result.name+'</h3>');
    result.types.forEach(element => {
     
      tipos+= '-'+ element.type.name+' ';
    });
-   tipos+= '</p>'
+   tipos+= '</h5>'
    $('#nameDescription').append(tipos);
-   let habilidad = 'Habilidades: <ul class="list-group list-group-flush">';
+   let habilidad = '<h4>Habilidades:</h4> <p class="list-group list-group-flush">';
    result.abilities.forEach(element => {
-     habilidad+=' <li class="list-group-item">'+element.ability.name+'</li>'
+     habilidad+=' <h5 class="list-group-item">'+element.ability.name+'</h5>'
    });
-   habilidad+= '</ul>';
+   habilidad+= '</p>';
    $('#nameDescription').append(habilidad);
    //Grafico
    let data= [];

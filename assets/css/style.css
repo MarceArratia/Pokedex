@@ -23,6 +23,10 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
+  h5{
+      color:red;
+  }
+
   .imgPokemon{
     width:80%;
     height: 50%;
@@ -56,19 +60,35 @@ body{
 
 .card-img-top{
      margin-left: 25%;
-    background: #7eb9b4;
+    background: #0aafa1;
     width: 10%;
     height: 10%;
+    margin-top: 7%;
+    border-radius: 2%;
+    
 }
 
 .cardDiseño{
     margin-top: 2%;
     text-align: center;
+    
+   
+  
 }
 
-.card-body{
+.card{
+    border-radius: 30%;
     
-    background: #7eb9b4;
+}
+
+.grafico{
+    border-style: inset;
+    border-style: outset;
+    border-radius: 5%;
+}
+
+.cardText{
+    margin-top: 30%;
 }
 
  
