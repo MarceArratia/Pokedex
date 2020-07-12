@@ -66,7 +66,7 @@ function visualPokemon(){
           success : function(result) {
             //console.log(result);
           
-             $('#showPokemon').append('<div><div><div class="tabla"><h4>'+result.name.toUpperCase()+'</h4><img src='+result.sprites.front_default+'></div></div></div>');
+             $('#showPokemon').append('<div><table class="tabla"><tr><td  style="vertical-align: middle;"><h4>'+result.name.toUpperCase()+'</h4></td><td><img src='+result.sprites.front_default+'></td></tr></table></div>');
           }
           ,error : function(xhr,errmsg,err) {
             console.log(xhr.status + ": " + xhr.responseText);
