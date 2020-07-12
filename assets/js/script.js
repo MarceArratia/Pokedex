@@ -41,6 +41,7 @@ function visualPokemon(){
   $('#showPokemon').empty();
   $('#showPokemon').css('display','block');
   $('#cardShow').css('display','none');
+  $('#contenidoFondo').css('display','none');
   let selectTipo= $('#selectPokemon option:selected').val();
   let pokemon=[];
   var promise = $.ajax({
@@ -64,7 +65,8 @@ function visualPokemon(){
           method:'GET', 
           success : function(result) {
             //console.log(result);
-             $('#showPokemon').append('<div class="card"><div class="card-body"><h4>'+result.name+'</h4><img src='+result.sprites.front_default+'></div></div>');
+          
+             $('#showPokemon').append('<div><div><div class="tabla"><h4>'+result.name.toUpperCase()+'</h4><img src='+result.sprites.front_default+'></div></div></div>');
           }
           ,error : function(xhr,errmsg,err) {
             console.log(xhr.status + ": " + xhr.responseText);
@@ -84,6 +86,7 @@ function card(result){
   $('#nameDescription').empty();
   $('#cardShow').css('display','block');
   $('#showPokemon').css('display','none');
+  $('#contenidoFondo').css('display','none');
   //console.log(result);
   let tipos='Tipos : ';
     $('#imgPokemon').attr("src",result.sprites.front_default);

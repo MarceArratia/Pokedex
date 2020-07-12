@@ -7,37 +7,44 @@
     <title>Pokedex</title> 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
 </head>
-<body onload="selectTipo()">
-    <div>
-     
-    </div>
-    <img src="./assets/img/logo_pokedex.jpg" class="pokImg" alt="">
-    
-    <div class="container" id="contenido">
-     <p>Encuentra el pokemon que estás buscando</p>
-        <input type="text" placeholder="Ej:Pikachu" id="inputPokemon"> 
-     <button class="btn btn-danger"  onclick="buscador()" style="width: 8% ;height:10%">Buscar</button>
-        <div></div>
+<header>
+<nav class="navbar navbar-light justify-content-between bg-purple imagen .visible-xs-*">
+    <img src="../Pokedex/assets/img/logo2.png" alt="" style="height: 30px; width: 10%; text-align: center;">
+  <a class="navbar-brand navbar-light" style="color: #ffff;">Encuentra tu Pokemon</a>
+    <a class="navbar-brand"><select class="selectNavbar"  id="selectPokemon" onchange="visualPokemon()">
+        <option value="1">Busca por tipo</option>
+    </select> </a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Ej: pikachu" aria-label="Search" id="inputPokemon">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #ffff; border-color: black ;" onclick="buscador()" value="">Por nombre</button>
+    </form>
+  </nav>
+</header>
+ <body onload="selectTipo()">
+        <div class=" imagen" >
+            <div id="contenidoFondo">
+                <h1>POKEDEX</h1>
+               </div>
+       
+   <div class="container" id="contenido">
+       <div></div>
         <div class="selectButton">
-            <select id="selectPokemon" onchange="visualPokemon()">
-                <option value="1">Selecciona tipo de Pokemon</option>
-              </select>
+            
         </div>
-        <div id="showPokemon" style="display: none;">
+        <div class="table" id="showPokemon" style="display: none;">
 
         </div>
 
         <!--INICIO Card con pokemon por nombre-->
         <div class="cardDiseño row d-flex justify-content-center">
             <div class="cardPokemon" id="cardShow" style="display: none;">
-                <div class="card" style="width: 27rem;">
-                    <img src="" id="imgPokemon" class="card-img-top" style="height: 170px; width: 50%; text-align: center;" alt="">
+                <div class="card" style="width: 25rem;">
+                    <img src="" id="imgPokemon" class="card-img-top" style="height: 120px; width: 35%; text-align: center;" alt="">
                     <div class="card-body" >
                         <div class="typesDescription" id="nameDescription"></div>
                         <div id="habilidades"></div>
-                        <div class="grafico" id="chartContainer" style="height: 280px; width: 90%; margin-left: 10%;"></div>
+                        <div class="grafico" id="chartContainer" style="height: 280px; width: 90%; margin-left: 8%;"></div>
                     </div>
                   </div>
             </div>
@@ -46,8 +53,10 @@
         
         <!--FIN Card con pokemon por nombre-->
     </div>
- 
-
+</div>
+<footer class="footer">
+<p>Copyright Marcela Arratia 2020&#169</p>
+</footer>
 
     <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"
