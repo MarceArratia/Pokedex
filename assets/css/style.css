@@ -6,14 +6,13 @@
 }
 
 body{
-  background: url(../img/fondo.jpg) no-repeat fixed center;
+  background:rgb(96, 34, 153);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-position: center;
   background-size: cover;
-  height: 100%;
-  width: 100% ;
+  
   text-align: center;
   font-family: 'Open Sans', sans-serif !important;
 }
@@ -21,7 +20,9 @@ body{
 p{
   color: #ffff;
 }
-
+.imagen{
+  background:rgb(96, 34, 153);
+}
 .container{
     padding: 1%;
     text-align: center;
@@ -52,7 +53,7 @@ color: #ffff;
   #contenidoFondo{
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    background:rgb(110, 64, 153);
     position: relative;
     z-index: -1;
   }
@@ -78,7 +79,6 @@ height: 2%;
 
   .imgPokemon{
     text-align: center;
-    background: #0aafa1;
    
   }
 
@@ -89,7 +89,7 @@ height: 2%;
 
   table{
     text-align: center;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.328);
   }
  
   .selectNavbar{
@@ -107,13 +107,14 @@ border-radius: 3%;
     height: 10%;
     margin-top: 3%;
     border-radius: 2%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.0);
     margin-left: 32%;
     
 }
 
 .cardDiseño{
     text-align: center;
+    background:rgb(96, 34, 153);
 }
 
 .tabla{
@@ -128,11 +129,11 @@ border-style: dotted;
     border-radius: 5% !important;
     border-style: ridge !important;
     background: rgba(255, 255, 255, 0.1);
-    background: url(../img/fondoCard.png) no-repeat;
+    background: url(../img/fondoCard.jpg) no-repeat;
 }
 
 .card-body{
-  background: rgba(255, 255, 255, 0.4);
+  
   border-radius: 5%;
 
 }
@@ -150,6 +151,10 @@ border-style: dotted;
 
 footer{
   text-align: center;
+  background-color:rgba(255, 255, 255, 0.1);
+  color: black !important;
+  margin-top: -15%;
+  
 }
 
  
