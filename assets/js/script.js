@@ -73,13 +73,7 @@ function visualPokemon(){
           }
         });
       });
-  //
- 
-  
 });
-
-
-
 }
 
 function card(result){
@@ -98,7 +92,7 @@ function card(result){
   
    $('#nameDescription').append(tipos);
    let contador = 0;
-   let habilidad = '<table class="tablePokemon table table-striped table-dark"><th colspan="2">Habilidades</th>';
+   let habilidad = '<table class="table table-striped"><th colspan="2">Habilidades: </th>';
    let cantidad=result.abilities.length;
    console.log(cantidad);
    result.abilities.forEach(element => {
